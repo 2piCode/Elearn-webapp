@@ -1,0 +1,16 @@
+body{
+    background: #2c2c2c;
+}
+
+aside{
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    height: 100vh;
+    color: #fff;
+    border-right: 5px solid #4d4d4d;
+}
+
+aside img {
+    width: 80px;
+}
