@@ -1,0 +1,15 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Вакансии{% endblock %}
+
+{% block content %}
+    <div class="features">
+        <h1>Страница про вакансии</h1>
+        {% for el in vacancies %}
+            <div class="alert alert-warning">
+                <h3>{{ el.name }}</h3>
+                <p>{{ el.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
