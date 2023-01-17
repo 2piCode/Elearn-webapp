@@ -11,7 +11,7 @@ def index(request):
     return render(request, 'vacancy/index.html')
 
 
-def relevance(request):
+def relevance_load(request):
     profession_name = "c++ разработчик"
     name_filter = Q(name__icontains=f'{profession_name}') | Q(name__icontains='c++')
     header_year = ["Год", "Средняя зарплата", f"Средняя зарплата - {profession_name}", "Количество вакансий",
@@ -32,7 +32,10 @@ def relevance(request):
         'statistics_by_years': statistics_by_years
     }
 
-    return render(request, 'vacancy/relevance.html', data)
+    return render(request, 'vacancy/relevance_load.html', data)
+
+def relevance(request):
+    return render(request, 'vacancy/relevance.html')
 
 
 def geography(request):

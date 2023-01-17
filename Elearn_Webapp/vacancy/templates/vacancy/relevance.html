@@ -7,49 +7,182 @@
 
 {% block content %}
     <h1>Аналитика зарплат по годам для профессии с/c++ разработчик</h1>
+    <br>
     <h2>Статистика по годам</h2>
-    <table>
-        <colgroup>
-            <col style="width: 10%">
-            <col style="width: 10%">
-            <col style="width: 10%">
-            <col style="width: 10%">
-            <col style="width: 10%">
-        </colgroup>
-        <tr>
-            {% for header in header_year %}
-                <th>
-                    {{ header }}
-                </th>
-            {% endfor %}
-        </tr>
-        {% for year in statistics_by_years %}
-            <tr>
-                <td>
-                    {{ year.published_at }}
-                </td>
-                <td>
-                    {% if year.avg_salary %}
-                        {{ year.avg_salary|floatformat:'0' }}
-                    {% else %}
-                        {{ "NA" }}
-                    {% endif %}
-                </td>
-                <td>
-                    {% if year.salary_by_profession_name %}
-                        {{ year.salary_by_profession_name|floatformat:'0' }}
-                    {% else %}
-                        {{ "NA" }}
-                    {% endif %}
-                </td>
-                <td>
-                    {{ year.total_count }}
-                </td>
-                <td>
-                    {{ year.count_by_profession_name }}
-                </td>
-            </tr>
-        {% endfor %}
-    </table>
+    <br>
     <img class='relevance_graph' src="{% static 'vacancy/img/relevance.png' %}" alt="">
+    <table cellpadding="5" cellspacing="5" bgcolor="#104E44">
+        <caption>{{ title }}</caption>
+        <thead class="">
+        <tr>
+            <th>Год</th>
+            <th>Средняя зарплата</th>
+            <th>Средняя зарплата - C/C++ разработчик</th>
+            <th>Количество вакансий</th>
+            <th>Количество вакансий - C/C++ разработчик</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr>
+            <td>2022</td>
+            <td>89231</td>
+            <td>190240</td>
+            <td>91142</td>
+            <td>491</td>
+        </tr>
+
+        <tr>
+            <td>2021</td>
+            <td>79365</td>
+            <td>140327</td>
+            <td>287915</td>
+            <td>1493</td>
+        </tr>
+
+        <tr>
+            <td>2020</td>
+            <td>71481</td>
+            <td>126159</td>
+            <td>489472</td>
+            <td>2631</td>
+        </tr>
+
+        <tr>
+            <td>2019</td>
+            <td>67693</td>
+            <td>124960</td>
+            <td>535956</td>
+            <td>3039</td>
+        </tr>
+
+        <tr>
+            <td>2018</td>
+            <td>59334</td>
+            <td>113485</td>
+            <td>517670</td>
+            <td>3329</td>
+        </tr>
+
+        <tr>
+            <td>2017</td>
+            <td>59026</td>
+            <td>105146</td>
+            <td>391464</td>
+            <td>2761</td>
+        </tr>
+
+        <tr>
+            <td>2016</td>
+            <td>58352</td>
+            <td>101064</td>
+            <td>332460</td>
+            <td>2404</td>
+        </tr>
+
+        <tr>
+            <td>2015</td>
+            <td>50899</td>
+            <td>100330</td>
+            <td>284763</td>
+            <td>2319</td>
+        </tr>
+
+        <tr>
+            <td>2014</td>
+            <td>49541</td>
+            <td>109518</td>
+            <td>259571</td>
+            <td>2410</td>
+        </tr>
+
+        <tr>
+            <td>2013</td>
+            <td>48827</td>
+            <td>73132</td>
+            <td>234019</td>
+            <td>2971</td>
+        </tr>
+
+        <tr>
+            <td>2012</td>
+            <td>47206</td>
+            <td>70692</td>
+            <td>173897</td>
+            <td>1533</td>
+        </tr>
+
+        <tr>
+            <td>2011</td>
+            <td>46226</td>
+            <td>64006</td>
+            <td>142458</td>
+            <td>1225</td>
+        </tr>
+
+        <tr>
+            <td>2010</td>
+            <td>43167</td>
+            <td>57418</td>
+            <td>93494</td>
+            <td>774</td>
+        </tr>
+
+        <tr>
+            <td>2009</td>
+            <td>42190</td>
+            <td>53829</td>
+            <td>52889</td>
+            <td>460</td>
+        </tr>
+
+        <tr>
+            <td>2008</td>
+            <td>43925</td>
+            <td>53903</td>
+            <td>75070</td>
+            <td>614</td>
+        </tr>
+
+        <tr>
+            <td>2007</td>
+            <td>38528</td>
+            <td>50500</td>
+            <td>53562</td>
+            <td>507</td>
+        </tr>
+
+        <tr>
+            <td>2006</td>
+            <td>NA</td>
+            <td>NA</td>
+            <td>33321</td>
+            <td>354</td>
+        </tr>
+
+        <tr>
+            <td>2005</td>
+            <td>NA</td>
+            <td>NA</td>
+            <td>16022</td>
+            <td>159</td>
+        </tr>
+
+        <tr>
+            <td>2004</td>
+            <td>NA</td>
+            <td>NA</td>
+            <td>7833</td>
+            <td>42</td>
+        </tr>
+
+        <tr>
+            <td>2003</td>
+            <td>NA</td>
+            <td>NA</td>
+            <td>1983</td>
+            <td>14</td>
+        </tr>
+        </tbody>
+    </table>
 {% endblock %}

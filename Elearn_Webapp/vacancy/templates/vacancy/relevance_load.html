@@ -1,0 +1,55 @@
+{% extends "vacancy/layout.html" %}
+{% load static %}
+
+{% block head_content %}
+<title>Востребованность</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Аналитика зарплат по годам для профессии с/c++ разработчик</h1>
+    <h2>Статистика по годам</h2>
+    <table>
+        <colgroup>
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 10%">
+            <col style="width: 10">
+        </colgroup>
+        <tr>
+            {% for header in header_year %}
+                <th>
+                    {{ header }}
+                </th>
+            {% endfor %}
+        </tr>
+        {% for year in statistics_by_years %}
+            <tr>
+                <td>
+                    {{ year.published_at }}
+                </td>
+                <td>
+                    {% if year.avg_salary %}
+                        {{ year.avg_salary|floatformat:'0' }}
+                    {% else %}
+                        {{ "NA" }}
+                    {% endif %}
+                </td>
+                <td>
+                    {% if year.salary_by_profession_name %}
+                        {{ year.salary_by_profession_name|floatformat:'0' }}
+                    {% else %}
+                        {{ "NA" }}
+                    {% endif %}
+                </td>
+                <td>
+                    {{ year.total_count }}
+                </td>
+                <td>
+                    {{ year.count_by_profession_name }}
+                </td>
+            </tr>
+        {% endfor %}
+    </table>
+    <img class='relevance_graph' src="{% static 'vacancy/img/relevance.png' %}" alt="">
+{% endblock %}

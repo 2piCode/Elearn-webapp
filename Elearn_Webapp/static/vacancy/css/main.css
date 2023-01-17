@@ -7,7 +7,8 @@ aside{
     background: #181818;
     width: 20%;
     padding: 2.5%;
-    height: 100vh;
+    max-height: inherit;
+    height:100vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -66,5 +67,30 @@ body .features p {max-width: 400px; margin: 20px auto;}
 }
 
 .container .relevance_graph {
-    max-width: 80%;
+    max-width: 55%;
+    float: right;
+    margin-top: 100px;
+}
+
+.container table {
+    max-width: 30%;
+    float: left;
+    margin-left: 5px;
+}
+
+.container h1 {
+    text-align:center;
+}
+
+.container h2 {
+    text-align:center;
+    text-decoration:underline;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+tr {
+    color: #fff;
 }
