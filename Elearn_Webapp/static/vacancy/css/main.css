@@ -67,8 +67,8 @@ body .features p {max-width: 400px; margin: 20px auto;}
 }
 
 .container .relevance_graph {
-    max-width: 55%;
-    float: right;
+    max-width: 50%;
+    float:right;
     margin-top: 100px;
 }
 
