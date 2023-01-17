@@ -131,3 +131,10 @@ GitHub.sublime-settings
 !.vscode/launch.json 
 !.vscode/extensions.json 
 .history
+Elearn_Webapp/.idea/
+
+Elearn_Webapp/vacancy/templates/vacancy/relevance_data.html
+
+Elearn_Webapp/1.py
+
+Elearn_Webapp/vacancies_with_skills.csv

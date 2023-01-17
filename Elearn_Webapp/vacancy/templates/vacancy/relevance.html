@@ -1,6 +1,9 @@
-{% extends 'vacancy/layout.html' %}
+{% extends "vacancy/layout.html" %}
+{% load static %}
 
-{% block title %}Востребованность{% endblock %}
+{% block head_content %}
+<title>Востребованность</title>
+{% endblock %}
 
 {% block content %}
     <h1>Аналитика зарплат по годам для профессии с/c++ разработчик</h1>
@@ -11,7 +14,7 @@
             <col style="width: 10%">
             <col style="width: 10%">
             <col style="width: 10%">
-            <col style="width: 10">
+            <col style="width: 10%">
         </colgroup>
         <tr>
             {% for header in header_year %}
@@ -48,4 +51,5 @@
             </tr>
         {% endfor %}
     </table>
+    <img class='relevance_graph' src="{% static 'vacancy/img/relevance.png' %}" alt="">
 {% endblock %}
