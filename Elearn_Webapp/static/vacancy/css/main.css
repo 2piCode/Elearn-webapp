@@ -59,3 +59,8 @@ body .features {
 body .features h1{font-size: 50px;}
 
 body .features p {max-width: 400px; margin: 20px auto;}
+
+
+main {
+    color: #fff;
+}

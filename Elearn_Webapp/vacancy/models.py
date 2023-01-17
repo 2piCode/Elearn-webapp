@@ -2,13 +2,11 @@ from django.db import models
 
 
 class Vacancy(models.Model):
-    name = models.CharField('Название', max_length=50)
-    key_skills = models.TextField("Навыки")
-    salary_from = models.FloatField('Нижняя граница зарплаты')
-    salary_to = models.FloatField('Верхняя граница зарплаты')
-    salary_currency = models.CharField('Валюта оклада', max_length=10)
+    name = models.CharField('Название', blank=False, null=False, max_length=50)
+    key_skills = models.TextField('Навыки', blank=True, null=True, default='')
+    salary = models.FloatField('Зарплата')
     area_name = models.CharField('Город', max_length=100)
-    published_at = models.DateTimeField('Время публикации')
+    published_at = models.TextField('Год публикации')
 
     def __str__(self):
         return self.name
