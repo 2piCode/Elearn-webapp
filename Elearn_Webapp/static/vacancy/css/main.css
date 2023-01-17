@@ -8,9 +8,20 @@ aside{
     width: 20%;
     padding: 2.5%;
     max-height: inherit;
-    height:100vh;
+    height:110vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
+}
+
+.right_menu{
+    float: right;
+    background: #181818;
+    width: 20%;
+    padding: 2.5%;
+    max-height: inherit;
+    height:110vh;
+    color: #fff;
+    border-left: 5px solid #4d4d4d;
 }
 
 
@@ -69,7 +80,6 @@ body .features p {max-width: 400px; margin: 20px auto;}
 .container .relevance_graph {
     max-width: 50%;
     float:right;
-    margin-top: 100px;
 }
 
 .container table {
