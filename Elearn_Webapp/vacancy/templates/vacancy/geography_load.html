@@ -1,0 +1,49 @@
+{% extends "vacancy/layout.html" %}
+{% load static %}
+
+{% block head_content %}
+<title>Востребованность</title>
+{% endblock %}
+
+{% block content %}
+    <h1>Аналитика зарплат по городам для профессии {{ title }}</h1>
+    <br>
+    <h2>Статистика по городам</h2>
+    <br>
+    <table bgcolor="#3c4142">
+        <colgroup>
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+            <col style="width: 25%">
+        </colgroup>
+        <thead>
+        <tr>
+            {% for header in header_city %}
+                <th>
+                    {{ header }}
+                </th>
+            {% endfor %}
+        </tr>
+        </thead>
+        <tbody>
+        {% for city in statistics_by_cities %}
+            <tr>
+                <td>
+                    {{ city.area_name }}
+                </td>
+                <td>
+                    {{ city.total_count }}
+                </td>
+                <td>
+                    {{ city.avg_salary|floatformat:"0" }}
+                </td>
+                <td>
+                    {{ city.prof_count }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <img class='relevance_graph' src="{% static 'vacancy/img/geography.png' %}" alt="">
+{% endblock %}
