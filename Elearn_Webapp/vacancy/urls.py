@@ -7,6 +7,7 @@ urlpatterns = [
     path('relevance', views.relevance, name='relevance'),
     path('geography_load', views.geography_load, name='geography_load'),
     path('geography', views.geography, name='geography'),
+    path('skills_load', views.skills_load, name='skills_load'),
     path('skills', views.skills, name='skills'),
     path('last_vacancies', views.last_vacancies, name='last')
 ]

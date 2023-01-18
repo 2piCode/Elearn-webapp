@@ -1,0 +1,24 @@
+{% extends 'vacancy/layout.html' %}
+
+{% block title %}Навыки{% endblock %}
+
+{% block content %}
+<table class="table">
+    <thead>
+    <tr>
+        {% for header in headers %}
+            <th>{{ header }}</th>
+        {% endfor %}
+    </tr>
+    </thead>
+    <tbody>
+    {% for year, skills in skills_by_year.items %}
+        <tr>
+            <td>{{ year }}</td>
+            <td>{% for skill, count in skills %}{{ skill }} - {{ count|floatformat:"2" }}%<br>{% endfor %}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
