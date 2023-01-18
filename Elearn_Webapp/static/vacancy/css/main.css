@@ -8,7 +8,7 @@ aside{
     width: 20%;
     padding: 2.5%;
     max-height: inherit;
-    height:110vh;
+    height:200vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -19,7 +19,7 @@ aside{
     width: 20%;
     padding: 2.5%;
     max-height: inherit;
-    height:110vh;
+    height:200vh;
     color: #fff;
     border-left: 5px solid #4d4d4d;
 }
@@ -77,16 +77,20 @@ body .features p {max-width: 400px; margin: 20px auto;}
     color: #fff;
 }
 
-.container .relevance_graph {
-    max-width: 50%;
-    float:right;
+.relevance_graph {
+    max-width: 60%;
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .container table {
-    max-width: 30%;
-    float: left;
-    margin-left: 5px;
+    max-width: 65%;
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
 }
+
 
 .container h1 {
     text-align:center;
