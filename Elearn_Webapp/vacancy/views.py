@@ -63,41 +63,21 @@ def geography(request):
     return render(request, 'vacancy/geography.html')
 
 
-def skills_load(request):
-    header = ["Год", 'Навыки']
-    all_skills = Vacancy.objects.exclude(key_skills=None).values('key_skills', 'published_at')
-    skills_by_year = {}
-    for skill in all_skills:
-        year = skill["published_at"]
-        if year not in skills_by_year.keys():
-            skills_by_year[year] = skill["key_skills"].split('\n')
-        else:
-            skills_by_year[year].extend(skill["key_skills"].split('\n'))
-
-    for year, skills in skills_by_year.items():
-        c = Counter(skills)
-        skills_by_year[year] = [(name, c[name] / len(skills) * 100.0) for name, count in c.most_common(10)]
-    data = {
-        "skills_by_year": dict(sorted(skills_by_year.items(), reverse=True)),
-        'headers': header
-    }
-    return render(request, 'vacancy/skills_load.html', data)
-
-
 def skills(request):
     return render(request, 'vacancy/skills.html')
 
-def skills_by_profession(request):
+def skills_load(request):
     profession_name = "C++ разработчик"
     name_filter = Q(name__icontains=f'{profession_name}') | Q(name__icontains='с++')
     vanacies_by_profession = Vacancy.objects.filter(name_filter)
     
+    header = ["Год", 'Навыки']
     all_skills = vanacies_by_profession.exclude(key_skills=None).values('key_skills', 'published_at')
     skills_by_year = {}
     for skill in all_skills:
         year = skill["published_at"]
         if year not in skills_by_year.keys():
-            skills_by_year[year] = skill["key_skills"].split('\n')
+            skills_by_year[year] = list(set(skill["key_skills"].split('\n')))
         else:
             skills_by_year[year].extend(skill["key_skills"].split('\n'))
 
