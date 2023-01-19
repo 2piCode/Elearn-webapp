@@ -8,7 +8,7 @@ aside{
     width: 20%;
     padding: 2.5%;
     max-height: inherit;
-    height:200vh;
+    height:257vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -19,7 +19,7 @@ aside{
     width: 20%;
     padding: 2.5%;
     max-height: inherit;
-    height:200vh;
+    height:257vh;
     color: #fff;
     border-left: 5px solid #4d4d4d;
 }
@@ -53,6 +53,7 @@ aside ul li{
     list-style: none;
     margin-top: 15px;
     transition: all .6s ease;
+    text-align: center;
 }
 
 aside ul li:hover, aside ul a:hover{
@@ -61,20 +62,50 @@ aside ul li:hover, aside ul a:hover{
 }
 
 body .features {
-    float: left;
+    /*float: left;*/
     color: #fff;
-    margin-top: 100px;
+    /*margin-top: 100px;*/
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     width: 75%;
 }
 
-body .features h1{font-size: 50px;}
+body .features ul, li{
+    list-style: none;
+    margin-top: 15px;
+    transition: all .6s ease;
+    text-align:center;
+    max-width: 400px;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+body .features ul li:hover {
+    color: #104E44;
+    transform: scale(1.05)
+}
+
+body .features h1{
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 body .features p {max-width: 400px; margin: 20px auto;}
 
 
 .container {
     color: #fff;
+}
+
+.advanteges{
+    max-width: 90%;
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .relevance_graph {
@@ -107,12 +138,4 @@ table, th, td {
 
 tr {
     color: #fff;
-}
-
-.container #skills_1{
-    display: inline-block;
-}
-
-.container #skills_2{
-    display: inline-block;
 }
