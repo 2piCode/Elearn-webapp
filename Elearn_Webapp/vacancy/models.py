@@ -6,7 +6,7 @@ class Vacancy(models.Model):
     key_skills = models.TextField('Навыки', blank=True, null=True, default='')
     salary = models.FloatField('Зарплата')
     area_name = models.CharField('Город', max_length=100)
-    published_at = models.TextField('Год публикации')
+    published_at = models.IntegerField('Год публикации')
 
     def __str__(self):
         return self.name
