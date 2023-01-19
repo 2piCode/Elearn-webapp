@@ -14,3 +14,10 @@ class Vacancy(models.Model):
     class Meta:
         verbose_name = 'Вакансия'
         verbose_name_plural = 'Вакансии'
+
+
+class HH(models.Model):
+    date = models.DateTimeField(blank=False, null=False)
+
+    def __str__(self):
+        return f"{self.date}"

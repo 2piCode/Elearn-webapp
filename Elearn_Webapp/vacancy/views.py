@@ -1,7 +1,9 @@
 from django.shortcuts import render
 from django.db.models import Q, Count, Avg
+from .forms import HHForm
 from .models import Vacancy
 from collections import Counter
+from .HHFinder import HHFinder
 
 
 def vacancy_home(request):
@@ -86,4 +88,15 @@ def skills_load(request):
 
 
 def last_vacancies(request):
-    return render(request, 'vacancy/last_vacancies.html')
+    MAX_COUNT = 10
+    vacancies = []
+    if request.method == "POST":
+        received_form = HHForm(request.POST)
+        if received_form.is_valid():
+            date = received_form.cleaned_data.get('date')
+            vacancies = HHFinder(date, MAX_COUNT).vacancies.to_dict(orient='records')
+    data = {
+        'vacancies': vacancies,
+        'form': HHForm()
+    }
+    return render(request, 'vacancy/last_vacancies.html', data)

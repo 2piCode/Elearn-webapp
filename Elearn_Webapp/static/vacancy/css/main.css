@@ -139,3 +139,19 @@ table, th, td {
 tr {
     color: #fff;
 }
+
+.vacancies_finder {
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 17px;
+}
+
+.find_button:hover {
+    background: #104E44;
+    transform: scale(1.05)
+}
+
+.find_button{
+    transition: all .6s ease;
+}

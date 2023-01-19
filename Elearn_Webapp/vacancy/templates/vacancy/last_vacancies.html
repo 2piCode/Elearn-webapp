@@ -8,25 +8,33 @@
         <form method="post">
             {% csrf_token %}
             <label for="date_day">Выберите день</label>
-                {{ form.date }}
-            <button type="submit" class="btn btn-primary mb-10">Готово</button>
+            {{ form.date }}
+            <br>
+            <button class="find_button">Найти</button>
         </form>
-        <table class="table table-striped table-bordered table-hover">
+        <br>
+        <table class="vacancies_finder" cellpadding="5" cellspacing="5" bgcolor="#3c4142">
             <thead>
-            {% for header in headers %}
-                <th>{{ header }}</th>
-            {% endfor %}
+            <tr>
+                <th>Название</th>
+                <th>Описание</th>
+                <th>Навыки</th>
+                <th>Компания</th>
+                <th>Оклад</th>
+                <th>Город</th>
+                <th>Дата публикации</th>
+            </tr>
             </thead>
             <tbody>
-            {% for vac in vacancies %}
+            {% for vacancy in vacancies %}
                 <tr>
-                    <td>{{ vac.name }}</td>
-                    <td>{{ vac.description|truncatechars:200 }}</td>
-                    <td>{{ vac.key_skills }}</td>
-                    <td>{{ vac.company }}</td>
-                    <td>{{ vac.salary }}</td>
-                    <td>{{ vac.area_name }}</td>
-                    <td>{{ vac.published_at }}</td>
+                    <td>{{ vacancy.name }}</td>
+                    <td>{{ vacancy.description|truncatechars:200 }}</td>
+                    <td>{{ vacancy.key_skills }}</td>
+                    <td>{{ vacancy.company }}</td>
+                    <td>{{ vacancy.salary }}</td>
+                    <td>{{ vacancy.area_name }}</td>
+                    <td>{{ vacancy.published_at }}</td>
                 </tr>
             {% endfor %}
             </tbody>
