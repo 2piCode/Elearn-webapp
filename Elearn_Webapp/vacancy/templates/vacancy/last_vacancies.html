@@ -4,8 +4,32 @@
 
 {% block content %}
     <div class="features">
-        <h1>Последние вакансии</h1>
-        <p>Текст для последних вакансий</p>
-        <button class="btn btn-danger">На страницу про что-то</button>
+        {{ error_msg }}
+        <form method="post">
+            {% csrf_token %}
+            <label for="date_day">Выберите день</label>
+                {{ form.date }}
+            <button type="submit" class="btn btn-primary mb-10">Готово</button>
+        </form>
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+            {% for header in headers %}
+                <th>{{ header }}</th>
+            {% endfor %}
+            </thead>
+            <tbody>
+            {% for vac in vacancies %}
+                <tr>
+                    <td>{{ vac.name }}</td>
+                    <td>{{ vac.description|truncatechars:200 }}</td>
+                    <td>{{ vac.key_skills }}</td>
+                    <td>{{ vac.company }}</td>
+                    <td>{{ vac.salary }}</td>
+                    <td>{{ vac.area_name }}</td>
+                    <td>{{ vac.published_at }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </div>
 {% endblock %}

@@ -8,6 +8,8 @@
 {% block content %}
     <h1>Аналитика зарплат по годам для профессии С/С++ разработчик</h1>
     <br>
+    <img class='relevance_graph' src="{% static 'vacancy/img/relevance_dark.png' %}" alt="">
+    <br>
     <h2>Статистика по годам</h2>
     <br>
     <table cellpadding="5" cellspacing="5" bgcolor="#104E44">
@@ -19,11 +21,11 @@
             <col style="width: 10">
         </colgroup>
         <tr>
-            {% for header in header_year %}
-                <th>
-                    {{ header }}
-                </th>
-            {% endfor %}
+            <th>Год</th>
+            <th>Средняя зарплата</th>
+            <th>Средняя зарплата - C/C++ программист</th>
+            <th>Количество вакансий</th>
+            <th>Количество вакансий - C/C++ программист</th>
         </tr>
         {% for year in statistics_by_years %}
             <tr>
@@ -53,5 +55,4 @@
             </tr>
         {% endfor %}
     </table>
-    <img class='relevance_graph' src="{% static 'vacancy/img/relevance.png' %}" alt="">
 {% endblock %}

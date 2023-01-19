@@ -6,7 +6,9 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Аналитика зарплат по городам для профессии {{ title }}</h1>
+    <h1>Аналитика зарплат по городам для профессии С/C++ программист</h1>
+    <br>
+    <img class='relevance_graph' src="{% static 'vacancy/img/geography.png' %}" alt="">
     <br>
     <h2>Статистика по городам</h2>
     <br>
@@ -19,11 +21,10 @@
         </colgroup>
         <thead>
         <tr>
-            {% for header in header_city %}
-                <th>
-                    {{ header }}
-                </th>
-            {% endfor %}
+            <th>Город</th>
+            <th>Всего вакансий</th>
+            <th>Средняя зарплата</th>
+            <th>Вакансий C/C++ программист</th>
         </tr>
         </thead>
         <tbody>
@@ -45,5 +46,4 @@
         {% endfor %}
         </tbody>
     </table>
-    <img class='relevance_graph' src="{% static 'vacancy/img/geography.png' %}" alt="">
 {% endblock %}
