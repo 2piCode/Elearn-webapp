@@ -108,3 +108,11 @@ table, th, td {
 tr {
     color: #fff;
 }
+
+.container #skills_1{
+    display: inline-block;
+}
+
+.container #skills_2{
+    display: inline-block;
+}
