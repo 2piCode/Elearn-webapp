@@ -7,8 +7,7 @@ aside{
     background: #181818;
     width: 20%;
     padding: 2.5%;
-    max-height: inherit;
-    height:257vh;
+    height:250vh;
     color: #fff;
     border-right: 5px solid #4d4d4d;
 }
@@ -18,15 +17,14 @@ aside{
     background: #181818;
     width: 20%;
     padding: 2.5%;
-    max-height: inherit;
-    height:257vh;
+    height:250vh;
     color: #fff;
     border-left: 5px solid #4d4d4d;
 }
 
 
 aside .logo{
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
     position: relative;
     top: -20px;
@@ -45,15 +43,16 @@ a{
 
 aside .profession{
     color: #fff;
-    font-size: 25px;
+    font-size: 40px;
     text-align: center;
 }
 
 aside ul li{
+    font-size: 25px;
     list-style: none;
-    margin-top: 15px;
+    margin-top: 30px;
     transition: all .6s ease;
-    text-align: center;
+    text-align: left;
 }
 
 aside ul li:hover, aside ul a:hover{
@@ -154,4 +153,20 @@ tr {
 
 .find_button{
     transition: all .6s ease;
+}
+
+.footer{
+    margin-top: 200px;
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    color: #fff;
+}
+
+.skills{
+    width: 70%;
+    display:table;
+    margin-left: auto;
+    margin-right: auto;
 }

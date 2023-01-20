@@ -1,67 +1,74 @@
 {% extends 'vacancy/layout.html' %}
+{% load static %}
 
 {% block title %}Навыки{% endblock %}
 
 {% block content %}
-<table cellpadding="5" cellspacing="5" bgcolor="#3c4142">
-    <thead>
-    <tr>
-        <th>Год</th>
-        <th>Навыки</th>
-        <th>Год</th>
-        <th>Навыки</th>
-    </tr>
-    </thead>
-    <tbody>
+    <h1>Аналитика скиллов для профессии C/C++ разработчик</h1>
+    <br>
+    <img class='skills' src="{% static 'vacancy/img/skills.png' %}" alt="">
+    <br>
+    <h2>Статистика по годам</h2>
+    <br>
+    <table cellpadding="5" cellspacing="5" bgcolor="#3c4142">
+        <thead>
+        <tr>
+            <th>Год</th>
+            <th>Навыки</th>
+            <th>Год</th>
+            <th>Навыки</th>
+        </tr>
+        </thead>
+        <tbody>
 
-        <tr>
-            <td>2022</td>
-            <td>
-                С/C++ - 23.66%<br>STL - 9.92%<br>GIT - 6.87%<br>ООП - 6,11%<br>Linux - 5.34%
-                <br>Boost - 5.34%<br>QT - 5.30%<br>Microsoft Visual Studio - 3.05%<br>C# - 2.41%
-            </td>
-            <td>2018</td>
-            <td>
-                C/C++ - 23.7%<br>GIT - 6.69%<br>ООП - 4.26%<br>Python - 3.95%<br>Linux - 3.95%<br>QT - 3.65%
-                <br>SQL - 2.43%<br>STL - 2.13%<br>C# 2.13%<br>
-            </td>
-        </tr>
-        <tr>
-            <td>2021</td>
-            <td>
-                C/C++ - 23.6%<br>Linux - 9.09%<br>QT - 6.27%<br>Python - 5.96%
-                <br>STL - 5.64%<br>GIT - 4.70%<br>Mac Os - 2.51%<br>Boost - 1.88%<br>PostgreeSQL - 1.88%<br>
-            </td>
-            <td>2017</td>
-            <td>
-                C/C++ - 20.98%<br>Linux - 6.99%<br>Python - 5.59%<br>ООП - 4.90%<br>GIT - 4.90%<br>STL - 4.20%
-                <br>Boost - 4.20%<br>QT - 4.20%<br>MFC - 3.50%
-            </td>
-        </tr>
-        <tr>
-            <td>2020</td>
-            <td>
-                C/C++ - 23.60%<br>Linux - 9.00%<br>QT - 5.46%<br>GIT - 3.96%<br>STL - 3.82%<br>ООП - 3.27%
-                <br>Английский язык - 2.46%<br>TCP/IP - 2.46%<br>Atlassian Jira - 2.05%
-            </td>
-            <td>2016</td>
-            <td>
-                C/C++ - 35.71%<br>STL - 18.57%<br>QT - 5.71%<br>ООП - 4.29%<br>Алгоритмы и структуры данных - 2.86%
-                <br>Boost - 2.86%<br>OpenGL - 1.43%<br>С# - 1.43%<br>WebGL - 1.43%
-            </td>
-        </tr>
-        <tr>
-            <td>2019</td>
-            <td>
-                C/C++ - 30.72%<br>Python - 7.52%<br>Linux - 6.90%<br>STL - 4.70%<br>Git - 3.76%<br>QT - 3,13%
-                <br>ООП - 2.82%<br>SQL - 2.51%<br>Boost - 2.19%
-            </td>
-            <td>2015</td>
-            <td>
-                C++ - 33.34%<br>QT - 16.67%<br>CMake - 16.67%<br>Linux - 4.17%<br>Highload - 4.17%<br>Big Data - 4.17%
-                <br>Internet - 4.17%<br>DirectX - 4.17%<br>Ogre - 4.17%
-            </td>
-        </tr>
-    </tbody>
-</table>
+            <tr>
+                <td>2022</td>
+                <td>
+                    С/C++ - 23.66%<br>STL - 9.92%<br>GIT - 6.87%<br>ООП - 6,11%<br>Linux - 5.34%
+                    <br>Boost - 5.34%<br>QT - 5.30%<br>Microsoft Visual Studio - 3.05%<br>C# - 2.41%
+                </td>
+                <td>2018</td>
+                <td>
+                    C/C++ - 23.7%<br>GIT - 6.69%<br>ООП - 4.26%<br>Python - 3.95%<br>Linux - 3.95%<br>QT - 3.65%
+                    <br>SQL - 2.43%<br>STL - 2.13%<br>C# 2.13%<br>
+                </td>
+            </tr>
+            <tr>
+                <td>2021</td>
+                <td>
+                    C/C++ - 23.6%<br>Linux - 9.09%<br>QT - 6.27%<br>Python - 5.96%
+                    <br>STL - 5.64%<br>GIT - 4.70%<br>Mac Os - 2.51%<br>Boost - 1.88%<br>PostgreeSQL - 1.88%<br>
+                </td>
+                <td>2017</td>
+                <td>
+                    C/C++ - 20.98%<br>Linux - 6.99%<br>Python - 5.59%<br>ООП - 4.90%<br>GIT - 4.90%<br>STL - 4.20%
+                    <br>Boost - 4.20%<br>QT - 4.20%<br>MFC - 3.50%
+                </td>
+            </tr>
+            <tr>
+                <td>2020</td>
+                <td>
+                    C/C++ - 23.60%<br>Linux - 9.00%<br>QT - 5.46%<br>GIT - 3.96%<br>STL - 3.82%<br>ООП - 3.27%
+                    <br>Английский язык - 2.46%<br>TCP/IP - 2.46%<br>Atlassian Jira - 2.05%
+                </td>
+                <td>2016</td>
+                <td>
+                    C/C++ - 35.71%<br>STL - 18.57%<br>QT - 5.71%<br>ООП - 4.29%<br>Алгоритмы и структуры данных - 2.86%
+                    <br>Boost - 2.86%<br>OpenGL - 1.43%<br>С# - 1.43%<br>WebGL - 1.43%
+                </td>
+            </tr>
+            <tr>
+                <td>2019</td>
+                <td>
+                    C/C++ - 30.72%<br>Python - 7.52%<br>Linux - 6.90%<br>STL - 4.70%<br>Git - 3.76%<br>QT - 3,13%
+                    <br>ООП - 2.82%<br>SQL - 2.51%<br>Boost - 2.19%
+                </td>
+                <td>2015</td>
+                <td>
+                    C++ - 33.34%<br>QT - 16.67%<br>CMake - 16.67%<br>Linux - 4.17%<br>Highload - 4.17%<br>Big Data - 4.17%
+                    <br>Internet - 4.17%<br>DirectX - 4.17%<br>Ogre - 4.17%
+                </td>
+            </tr>
+        </tbody>
+    </table>
 {% endblock %}
